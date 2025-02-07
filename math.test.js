@@ -36,3 +36,19 @@ it("should return sum of all string value", () => {
   //   Assertion
   expect(result).toBe(expectedResult);
 });
+
+it("should throw an error if no argument is passed", () => {
+  const resultFN = () => {
+    add();
+  };
+
+  expect(resultFN).toThrow();
+});
+
+it("should throw an error if multiple argument is passed", () => {
+  const resultFN = () => {
+    add(1, 2);
+  };
+
+  expect(resultFN).toThrow();
+});
