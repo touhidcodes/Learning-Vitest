@@ -1,9 +1,48 @@
 import { it, expect } from "vitest";
+import { validateArrayNotEmpty, validateEmail } from "./validation";
 
-it("should return an array of numbers if an array of string numbers are provided", () => {
-  const numbers = ["1", "2"];
+it("should validate a correct email address", () => {
+  const email = "example@gmail.com";
+  const wrapperFN = () => validateEmail(email);
+  expect(wrapperFN).not.toThrow();
+});
 
-  const result = cleanNumbers(numbers);
+it("should throw an error for an invalid email address", () => {
+  const email = "example";
+  const wrapperFN = () => validateEmail(email);
+  expect(wrapperFN).toThrow();
+});
 
-  expect(result[0]).toBeTypeOf("number");
+it("should throw an error for an empty string", () => {
+  const email = "";
+  const wrapperFN = () => validateEmail(email);
+  expect(wrapperFN).toThrow();
+});
+
+it("should throw an error for null", () => {
+  expect(() => validateEmail(null)).toThrow("Invalid email format");
+});
+
+it("should throw an error for undefined", () => {
+  expect(() => validateEmail(undefined)).toThrow("Invalid email format");
+});
+
+it("should validate a non empty array", () => {
+  const array = [2, 4, 5];
+  const wrapperFN = () => validateArrayNotEmpty(array);
+  expect(wrapperFN).not.toThrow();
+});
+
+it("should throw an error for empty array", () => {
+  expect(() => validateArrayNotEmpty([])).toThrow("Array must not be empty");
+});
+
+it("should throw an error for null", () => {
+  expect(() => validateArrayNotEmpty(null)).toThrow("Array must not be empty");
+});
+
+it("should throw an error for undefined", () => {
+  expect(() => validateArrayNotEmpty(undefined)).toThrow(
+    "Array must not be empty"
+  );
 });
