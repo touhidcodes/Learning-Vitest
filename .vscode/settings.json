@@ -1,0 +1,58 @@
+{
+  "settingsSync.ignoredSettings": [],
+  "editor.fontSize": 16,
+  "editor.wordWrap": "on",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.linkedEditing": true,
+  "editor.fontLigatures": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.guides.bracketPairs": "active",
+  //  files
+  "files.autoSave": "onWindowChange",
+  "files.associations": {
+    "*.tsx": "typescriptreact"
+  },
+  "files.exclude": {
+    "**/.vscode": true
+  },
+  //  default formatter
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  //  terminal
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.fontFamily": "'Hack Nerd Font', monospace",
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.env.windows": {},
+  // git
+  "git.openRepositoryInParentFolders": "never",
+  // languages
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.format.insertSpaceAfterConstructor": true,
+  "[typescriptreact]": {},
+  "[typescript]": {},
+  //  workbench
+  "workbench.editor.languageDetection": false,
+  "workbench.editor.enablePreview": false,
+  "workbench.colorTheme": "One Dark Pro Darker",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.editorAssociations": {
+    "*.css": "tailwindcss"
+  },
+  // others
+  "explorer.confirmDelete": false,
+  "oneDarkPro.vivid": true,
+  "css.lint.unknownAtRules": "ignore",
+  "cSpell.userWords": ["persistor", "tailwindcss"],
+  "console-ninja.featureSet": "Community",
+  "prisma.fileWatcher": true,
+  "editor.fontWeight": "normal",
+  "editor.fontVariations": false,
+  "editor.fontFamily": "Montserrat, Consolas, 'Courier New', monospace",
+  "prisma.showPrismaDataPlatformNotification": false
+}
